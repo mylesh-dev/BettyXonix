@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://bex4dqeggg0h5"]
+
+[ext_resource type="Texture2D" uid="uid://cusia6w3qpn33" path="res://assets/ui/level_select_frame_128.png" id="1_08fxh"]
+[ext_resource type="Texture2D" uid="uid://o8wfw0dyqka7" path="res://assets/ui/level_select_frame_select_128.png" id="2_ya27d"]
+[ext_resource type="Texture2D" uid="uid://dmpnkbcupt4eg" path="res://assets/ui/level_select_frame_hover_128.png" id="3_qhtub"]
+[ext_resource type="Script" path="res://menu_button/menu_button.gd" id="4_4mye3"]
+
+[node name="MenuButton" type="TextureButton"]
+offset_right = 128.0
+offset_bottom = 128.0
+texture_normal = ExtResource("1_08fxh")
+texture_pressed = ExtResource("2_ya27d")
+texture_hover = ExtResource("3_qhtub")
+script = ExtResource("4_4mye3")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Menu
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
